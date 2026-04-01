@@ -1,7 +1,8 @@
 # Privacy Policy — TianJi (Firebase iOS)
 
 **Controller:** [Legal Entity Name] (“**we**,” “**us**,” “**our**”)  
-**App:** TianJi — BaZi chart generation (iOS)  
+**App:** TianJi — Your Destiny is unfolding…  
+**Product type:** BaZi (Four Pillars) chart application for iOS  
 **Bundle identifier:** `com.nexazenith.FirebaseApi`  
 
 **Effective date:** [Insert date]  
