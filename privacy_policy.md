@@ -1,164 +1,218 @@
-# Privacy Policy — TianJi (FirebaseApi iOS)
+# Privacy Policy — TianJi (Firebase iOS)
 
-**Status:** Draft for App Store / in-app display — **have qualified counsel review** before publication.  
+**Controller:** [Legal Entity Name] (“**we**,” “**us**,” “**our**”)  
+**App:** TianJi — BaZi chart generation (iOS)  
+**Bundle identifier:** `com.nexazenith.FirebaseApi`  
+
 **Effective date:** [Insert date]  
-**Last updated:** March 25, 2025  
+**Last updated:** April 1, 2026  
 
-Replace all bracketed placeholders (`[…]`) with your final legal name, contacts, and URLs.
+This Privacy Policy explains what information is processed when you use our App, how we use it, and your choices. **Privacy laws vary by region.** Before you rely on this document for compliance or litigation, **have qualified counsel review** the final version and replace every bracketed placeholder below (e.g. `[Insert date]`, contact emails, and legal entity name).
 
 ---
 
-## 1. Introduction
+## Summary (plain language)
 
-This Privacy Policy describes how **[Legal Entity Name]** (“**we**,” “**us**,” or “**our**”) collects, uses, stores, and shares information when you use **TianJi** (the mobile application distributed under bundle identifier `com.nexazenith.FirebaseApi`, together with related backend services, the “**App**”).
+- **Launch focus:** At this time, the App is built around **BaZi (Four Pillars) chart generation**. Features such as narrative readings may be **disabled or removed** from the build you download; only the practices described for **chart generation and core app operation** apply unless we ship and disclose additional features.
+- **No ads, no data brokerage:** We **do not sell** personal information. We **do not** use your information for **cross-app advertising** or **behavioural advertising** through data brokers.
+- **Minimal processing:** We process information **only** to operate the App (charts, optional purchases, reliability, and support you initiate). We **do not** ask for contacts, your photo library, or precise location for chart features.
+- **Support diagnostics (optional):** If you choose **Contact support** in Settings, you may send us a short, **on-device diagnostic log** plus basic device/app metadata. That log is designed **not** to include birth details, chart payloads, or other sensitive content—see **Support diagnostics and email** below.
 
-By using the App, you agree to this Privacy Policy. If you do not agree, please do not use the App.
+If anything in this Policy conflicts with the **App Store listing**, in-app disclosures, or **Apple’s requirements**, those sources should be reconciled with counsel before release—
 
-## 2. Scope
+---
 
-The App is a **BaZi (Four Pillars)** chart and reading tool. It combines on-device storage with **Google Firebase** backend services and, for certain features, **AI-assisted text generation** on our servers. This policy covers:
+## 1. Who we are
+
+This Privacy Policy applies to **[Legal Entity Name]** and the TianJi iOS application and its use of **Google Firebase** (and, where applicable, **Apple** services such as the App Store and StoreKit).
+
+**Contact details** appear in **Section 15 (Contact us)**.
+
+---
+
+## 2. Scope and launch product
+
+The App lets you create and manage **BaZi charts** using traditional computational methods, with optional online support through our backend. **This policy covers:**
 
 - Information processed **on your device**
-- Information sent to **our Firebase project** (Authentication, Cloud Functions, Firestore, and related infrastructure)
-- **Subprocessors** we rely on (e.g., Google, OpenAI) as described below
+- Information sent to **Firebase** (Authentication, Cloud Functions, Firestore, and related Google Cloud infrastructure as configured for our project)
+- Information you **voluntarily email** to us through **Contact support**
 
-This policy does **not** govern third-party websites or services that we do not control.
+It does **not** cover third-party sites or services we do not control.
 
-## 3. Information We Collect
+---
 
-### 3.1 Information you provide
+## 3. Categories of information we process
 
-When you create or manage **charts** or request **readings**, you may enter or store data such as:
+We align our descriptions with how **Apple** and common privacy laws refer to “personal information” or “personal data.” **Information you type in** to generate a chart (for example **birth date, birth time, timezone, and gender**) is **personal information** because it identifies or relates to a person. We process it **only** as described here—not for unrelated marketing dossiers or resale.
 
-- **Name** or label for a chart (and optional initials)
-- **Date of birth**, **time of birth**, **timezone**, and **gender** (used for chart calculation)
-- **Chart and reading content** derived from or related to that input (including structured BaZi data, narrative text, and exports)
+### 3.1 Information you provide (chart inputs)
 
-You are responsible for the accuracy of the information you enter.
+When you create or edit a chart, you may enter:
+
+- An optional **label or name** for the chart
+- **Date of birth**, **time of birth**, **timezone**, and **gender** (needed for BaZi calculation)
+- Any notes or labels you choose to store **locally** with the chart
+
+You should avoid entering unnecessary sensitive information; you are responsible for the accuracy of what you supply.
 
 ### 3.2 Information stored on your device
 
-The App stores much of your content **locally** using **Apple Core Data**, including:
+The App uses **Apple frameworks** to store data **on your device**, including:
 
-- Saved charts and associated metadata (for example, validation flags and timestamps)
-- Saved readings, including raw responses, formatted content, PDFs where generated, favorites, and archive state
+- **Core Data:** Saved charts and related metadata (for example, validation flags or timestamps if present in your build)
+- **Keychain:** Security-sensitive identifiers related to **entitlements** (for example, chart-slot or installation-correlation identifiers), consistent with iOS practice
+- **UserDefaults** (or similar): Preferences such as disclaimer acceptance, language, or internal counters used for app state
 
-**Keychain** may be used for security-sensitive device identifiers related to **entitlements** (for example, chart-slot or installation-correlation identifiers), consistent with iOS best practices.
-
-**User preferences** (for example, disclaimer acceptance, language settings, or internal counters used to sync state) may be stored in **UserDefaults** or similar on-device storage.
-
-Data stored only on your device is **not** accessible to us unless it is transmitted to our backend as described in this policy or you choose to share it yourself (for example, by exporting or sharing a file).
+Unless that data is sent to our servers as described below—or you export or share it yourself—we **cannot access** purely on-device content.
 
 ### 3.3 Information processed on our servers (Firebase)
 
-When you use online features (such as generating or validating a chart, generating readings, or synchronizing purchase-related slot state), the App communicates with **Firebase**. Depending on the feature, our servers may process:
+When you use features that call our backend (for example **generating or validating a chart**, or synchronizing **purchase-related** entitlements), the App communicates with **Firebase**. Depending on the operation, processing may include:
 
 - A **Firebase Anonymous Authentication** identifier (Firebase UID)
-- **App version** and a **device installation correlation identifier** (`userUUID`) we use to help with support and entitlement consistency across reinstall or restore
-- **Aggregated ledger fields** written to **Firestore** (for example, counts and limits related to saved charts and purchased capacity, sync timestamps, and server-maintained compensation fields we do not allow the client to set)
-- **Payloads required to perform the operation**, which typically include birth-related inputs and/or structured BaZi chart data derived in the App or on the server, plus reading parameters (tier, language, category, etc.)
+- **App version** and a **device installation correlation identifier** used for **support** and **consistent entitlements** after reinstall or restore
+- **Firestore** fields needed to operate the product (for example, counts or limits related to charts and purchased capacity, sync timestamps, and fields the server maintains for integrity)
+- **Request payloads** needed to perform the operation—typically **birth-related inputs** and/or **structured BaZi data** returned from chart computation
 
-We design Cloud Functions to receive only what is needed to fulfill a request. You should assume that **birth data and chart-derived data are considered sensitive personal information**; treat the App accordingly.
+**Chart inputs and outputs are sensitive.** We transmit them over encrypted connections and restrict access on the backend using industry-standard controls.
 
-### 3.4 AI processing (OpenAI)
+### 3.4 Automatic / technical data
 
-Some readings or validations are produced using **large language models** via **OpenAI** (or comparable providers we may use in the future), called **only from our server environment** (not with your API keys). For those requests, our backend may send **prompt text** that includes chart-related context and structured data sufficient to generate the reading or validation output.
+Like most networked apps, **Google** (Firebase / Google Cloud) and we may process **technical data** when you use the App, such as **IP address**, **request metadata**, and (depending on project configuration) **diagnostics or stability** data **if** those products are linked in a given build. For Google’s practices, see [Firebase Privacy and Security](https://firebase.google.com/support/privacy).
 
-**OpenAI’s use of API data** is governed by OpenAI’s policies applicable to enterprise/API use. We do not intentionally send unrelated device contacts, photos, or location trails for these features; the substantive content is tied to the chart and reading you requested.
+We do **not** intend at launch to use such data for advertising profiling; any material change will be reflected here and, where required, in-app.
 
-### 3.5 Automatic / technical data
+---
 
-Like most mobile apps that use Firebase and cloud infrastructure, Google and we may process certain **technical and operational** data when you use the App, such as:
+## 4. Support diagnostics and email (user-initiated)
 
-- IP address and request metadata (via Firebase/Google infrastructure)
-- Diagnostic, stability, or usage data if enabled in our Firebase/Google configuration (for example, if Analytics or Crashlytics components are linked in your build)
+When something goes wrong, you can use **Settings → Contact support** (if available in your build) to open an email to us. **Nothing is sent automatically**; you choose whether to send the message.
 
-The exact telemetry products depend on your **Firebase project configuration** and ** Xcode dependency graph**. For Google’s practices generally, see Google’s privacy documentation for Firebase and Google Analytics.
+**What may be included when you contact us:**
 
-## 4. How We Use Information
+- **Device and app metadata** our composer adds for troubleshooting (for example, model, iOS version, app version, locale—see your build’s implementation)
+- A **recent excerpt** of an **on-device diagnostic log** maintained for support
+
+**What we design the diagnostic log to exclude:** We intend **not** to write **raw chart JSON**, **birth dates/times**, **prompt text**, or similar **identifying or chart content** into this log. Entries are meant to be **short, technical summaries** (for example, error domain, code, and brief description) to help us reproduce issues **without** unnecessary personal detail.
+
+If you **manually** type personal information into the email body, that content is treated as information you provided to us for support and is used **only** to respond to your request, subject to ordinary retention for support and legal compliance.
+
+---
+
+## 5. How we use information
 
 We use information to:
 
-- Generate, validate, and display **BaZi charts** using traditional computational rules and our **TianJi** analysis/narrative engine (including server-side libraries)
-- Generate and deliver **readings** and related HTML/PDF outputs
-- Maintain **anonymous accounts**, **rate limits**, **entitlements**, and **ledger** consistency
-- Improve reliability, security, and product quality
-- Comply with law and enforce our **Terms of Use**
+- **Generate, validate (if enabled in your build), display, and store** BaZi charts
+- Maintain **anonymous authentication**, **rate limits**, **entitlements**, and **ledger** consistency where those features exist
+- **Operate, secure, and improve** the service (for example, fixing outages or abuse patterns)
+- **Respond** to support requests you send
+- **Comply with law** and enforce our **Terms of Use**
 
-We do **not** use the App to provide medical, legal, financial, or other regulated professional advice. See the **Terms of Use & Disclaimer** for limitations.
+Charts and metadata are **not** a substitute for medical, legal, financial, or other professional advice. See your **Terms of Use & Disclaimer**.
 
-## 5. Legal Bases (if applicable)
+---
 
-If the **GDPR** or similar law applies, we typically rely on:
+## 6. Generative AI and readings
 
-- **Performance of a contract** (providing the App and purchased digital content you request)
-- **Legitimate interests** (security, fraud prevention, improving the service, sync and support correlation), balanced against your rights
-- **Consent** where required (for example, certain analytics or marketing, if we add them and ask explicitly)
+**At launch,** this Policy describes an App centered on **chart generation**. We **do not** describe separate **AI narrative reading** products here. If we later enable readings or other **generative-AI** features in a public build, we will **update this Privacy Policy** and, where required, **App Store privacy answers** and in-app disclosures **before** or **concurrent with** that release.
 
-Laws vary by region; contact us if you need jurisdiction-specific information.
+---
 
-## 6. Sharing of Information
+## 7. Legal bases (EEA / UK–style laws)
+
+Where **GDPR** or similar laws apply, we typically rely on:
+
+- **Performance of a contract** (providing the App and features you request, including paid items)
+- **Legitimate interests** (security, fraud prevention, improving reliability, support correlation), balanced against your rights
+- **Consent** where the law requires it (for example, certain optional analytics, if we add them and ask clearly)
+
+Contact us if you need jurisdiction-specific information.
+
+---
+
+## 8. Sharing and subprocessors
 
 We share information with:
 
-- **Google Firebase / Google Cloud** (hosting, authentication, database, and functions) — see [Google’s Firebase Privacy information](https://firebase.google.com/support/privacy)
-- **OpenAI** (when our Cloud Functions call their API to generate text)
-- **Apple** (App Store transactions, device and account context governed by Apple’s policies)
-- **Professional advisers** (lawyers, accountants) or **authorities** when required by law or to protect rights and safety
+| Recipient | Role |
+|-----------|------|
+| **Google Firebase / Google Cloud** | Hosting, authentication, database, server logic — see [Firebase Privacy and Security](https://firebase.google.com/support/privacy) |
+| **Apple** | App distribution, **App Store** purchases, **StoreKit**, and platform services governed by [Apple’s Privacy Policy](https://www.apple.com/legal/privacy/) |
+| **Professional advisers or authorities** | When required by law or to protect rights and safety |
 
-We do **not** sell your personal information for money. If we use advertising partners in the future, we will update this policy.
+We **do not sell** personal information **for money**. We **do not** share information for **cross-context behavioural advertising** as part of our business model.
 
-## 7. Retention
+---
 
-- **On-device data** remains until you delete it, uninstall the App, or erase device storage.
-- **Server-side data** is retained for as long as needed to operate the App, comply with law, resolve disputes, and enforce agreements. Anonymous Firebase UIDs and Firestore documents may persist until we run maintenance or deletion routines.
-- **Logs** (if any) are retained for a limited operational period unless law requires longer storage.
+## 9. Retention
 
-Specific retention schedules may be tightened as the product matures; material changes will be reflected in this policy or in-app notice where appropriate.
+- **On-device data** remains until you delete it, uninstall the App, or erase the device.
+- **Server-side data** is kept only as long as needed to run the service, comply with law, resolve disputes, and enforce agreements. Maintenance or deletion routines may apply to anonymous IDs and Firestore documents.
+- **Support emails and related logs** may be retained for a **reasonable period** to handle your inquiry and for internal quality assurance, unless law requires longer retention.
 
-## 8. Security
+---
 
-We use industry-standard measures appropriate to the service: encryption in transit (HTTPS), access controls on backend resources, and server-side handling of secrets (for example, **OpenAI keys are not embedded in the App binary**). No method of transmission or storage is 100% secure.
+## 10. Security
 
-## 9. Children’s Privacy
+We use measures appropriate to the risk, including **encryption in transit (HTTPS)**, access controls for backend resources, and **server-side** handling of secrets (**API keys are not embedded in the client for server-only operations**). **No method of storage or transmission is completely secure.**
 
-The App is **not directed to children** under 13 (or the minimum age required in your region). We do not knowingly collect personal information from children. If you believe we have, contact us and we will take appropriate steps.
+---
 
-## 10. International Transfers
+## 11. Children’s privacy
 
-If you use the App from outside the country where our Firebase project is hosted, your information may be processed in **the United States** or other regions where Google Cloud, OpenAI, or we operate. We rely on appropriate safeguards where required (for example, standard contractual clauses).
+The App is **not directed to children** under **13** (or the higher age required in your region). We do **not knowingly** collect personal information from children. If you believe we have, contact us and we will take appropriate steps.
 
-## 11. Your Rights and Choices
+---
 
-Depending on your location, you may have rights to **access**, **correct**, **delete**, **export**, **object to**, or **restrict** certain processing, and to **withdraw consent** where processing is consent-based.
+## 12. International transfers
 
-**Practical limitations:** Because the App uses **anonymous Firebase accounts** tied to a device installation, we may not be able to verify identity to the same degree as an email-password service. Deleting the App or requesting account-level deletion workflows (if we offer them) may be necessary to remove server-side identifiers we can associate with your usage.
+If you use the App from outside the region where our Firebase project is hosted, data may be processed in the **United States** and other regions where **Google Cloud** operates. Where required, we rely on appropriate mechanisms (for example, **standard contractual clauses**).
 
-**iOS controls:** You can uninstall the App, clear local data, limit tracking preferences via Apple settings, and control network access.
+---
 
-To exercise rights, contact us at **[privacy@example.com]** (replace with your address). We will respond within the timeframe required by applicable law.
+## 13. Your rights and choices
 
-## 12. California / U.S. State Privacy Notices (summary)
+Depending on where you live, you may have rights to **access**, **correct**, **delete**, **export**, **object to**, or **restrict** processing, and to **withdraw consent** where processing is consent-based.
 
-If a U.S. state privacy law applies, you may have additional rights (for example, to opt out of certain “sales” or “sharing” and to appeal decisions). We describe categories of data above. Contact **[privacy@example.com]** for requests. We do not discriminate for exercising rights.
+Because we often use **anonymous Firebase accounts** tied to a device installation, **verifying identity** for account-level requests may be limited compared with email-password services. **Deleting the App**, clearing local data, or contacting us for **server-side deletion** (if we offer a process) may be necessary.
 
-## 13. Changes to This Policy
+**iOS:** You can uninstall the App, adjust tracking-related settings where Apple provides them, and control network access.
 
-We may update this Privacy Policy from time to time. We will post the updated version with a new “Last updated” date and, where appropriate, provide notice in the App or by email if we have a direct relationship with you.
+To exercise rights, email **[privacy@example.com]** (replace before publication). We will respond within the time required by applicable law.
 
-## 14. Contact
+---
+
+## 14. California and other U.S. state privacy notices (summary)
+
+Under certain **U.S. state** privacy laws, you may have rights such as **access**, **deletion**, **correction**, **opt-out of sale/sharing**, and **appeal**. We **do not “sell”** personal information in the conventional sense described above. For requests, contact **[privacy@example.com]**. We **do not discriminate** against you for exercising these rights.
+
+**Categories of personal information** we process are described in **Section 3**. **Purposes** are described in **Section 5**.
+
+---
+
+## 15. Changes to this Policy
+
+We may update this Privacy Policy to reflect product, legal, or operational changes. We will revise the **“Last updated”** date and, where appropriate, provide **additional notice in the App** or by other lawful means.
+
+---
+
+## 16. Contact us
 
 **[Legal Entity Name]**  
 [Street address]  
 [City, region, postal code]  
 
-**Privacy inquiries:** [privacy@example.com]  
-**General support:** [support@example.com] (align with `SettingsSupportConstants` in the App)
+**Privacy:** [privacy@example.com]  
+**Support:** [support@example.com] — align with `SettingsSupportConstants.supportEmailAddress` in the App before release.
 
 ---
 
 ### Document control
 
 - **Product name:** TianJi  
-- **iOS bundle ID:** `com.nexazenith.FirebaseApi`  
-- **Backend (observed in codebase):** Firebase Auth (anonymous), Cloud Functions, Firestore (`users/{uid}` ledger), TianJi library in Functions, OpenAI via server-side `llmService`.
+- **Platform:** Firebase iOS (SwiftUI app; backend Firebase Auth anonymous, Cloud Functions, Firestore ledger as implemented)  
+- **Launch scope (policy alignment):** Chart generation focus; reading/generative-AI features **out of scope** for this revision unless and until shipped and disclosed.  
+- **Support logging:** On-device diagnostic log and Contact-support flow per `SupportDiagnosticLog`, `SupportDiagnosticsBridge`, and `SupportEmailComposer` (no chart payloads or birth text in log by design).
+
