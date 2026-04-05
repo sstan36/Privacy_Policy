@@ -1,14 +1,16 @@
 # Privacy Policy — TianJi (Firebase iOS)
 
-**Controller:** [Legal Entity Name] (“**we**,” “**us**,” “**our**”)  
+**Controller:** **Michael Tan** (“**we**,” “**us**,” “**our**”)  
 **App:** TianJi — Your Destiny is unfolding…  
 **Product type:** BaZi (Four Pillars) chart application for iOS  
 **Bundle identifier:** `com.nexazenith.FirebaseApi`  
 
-**Effective date:** [Insert date]  
-**Last updated:** April 1, 2026  
+**Published copy (this policy online):** [https://sstan36.github.io/Privacy_Policy/privacy_policy.md](https://sstan36.github.io/Privacy_Policy/privacy_policy.md)  
 
-This Privacy Policy explains what information is processed when you use our App, how we use it, and your choices. **Privacy laws vary by region.** Before you rely on this document for compliance or litigation, **have qualified counsel review** the final version and replace every bracketed placeholder below (e.g. `[Insert date]`, contact emails, and legal entity name).
+**Effective date:** 30 March 2026  
+**Last updated:** 30 March 2026  
+
+This Privacy Policy explains what information is processed when you use our App, how we use it, and your choices. **Privacy laws vary by region.** Before you rely on this document for compliance or litigation, consider **having qualified counsel review** the final version.
 
 ---
 
@@ -25,9 +27,9 @@ If anything in this Policy conflicts with the **App Store listing**, in-app disc
 
 ## 1. Who we are
 
-This Privacy Policy applies to **[Legal Entity Name]** and the TianJi iOS application and its use of **Google Firebase** (and, where applicable, **Apple** services such as the App Store and StoreKit).
+This Privacy Policy applies to **Michael Tan** and the TianJi iOS application and its use of **Google Firebase** (and, where applicable, **Apple** services such as the App Store and StoreKit).
 
-**Contact details** appear in **Section 15 (Contact us)**.
+**Contact details** appear in **Section 16 (Contact us)**.
 
 ---
 
@@ -181,13 +183,13 @@ Because we often use **anonymous Firebase accounts** tied to a device installati
 
 **iOS:** You can uninstall the App, adjust tracking-related settings where Apple provides them, and control network access.
 
-To exercise rights, email **[privacy@example.com]** (replace before publication). We will respond within the time required by applicable law.
+To exercise rights, email **tianjisupport@gmail.com**. We will respond within the time required by applicable law.
 
 ---
 
 ## 14. California and other U.S. state privacy notices (summary)
 
-Under certain **U.S. state** privacy laws, you may have rights such as **access**, **deletion**, **correction**, **opt-out of sale/sharing**, and **appeal**. We **do not “sell”** personal information in the conventional sense described above. For requests, contact **[privacy@example.com]**. We **do not discriminate** against you for exercising these rights.
+Under certain **U.S. state** privacy laws, you may have rights such as **access**, **deletion**, **correction**, **opt-out of sale/sharing**, and **appeal**. We **do not “sell”** personal information in the conventional sense described above. For requests, contact **tianjisupport@gmail.com**. We **do not discriminate** against you for exercising these rights.
 
 **Categories of personal information** we process are described in **Section 3**. **Purposes** are described in **Section 5**.
 
@@ -201,12 +203,10 @@ We may update this Privacy Policy to reflect product, legal, or operational chan
 
 ## 16. Contact us
 
-**[Legal Entity Name]**  
-[Street address]  
-[City, region, postal code]  
+**Michael Tan**  
+Singapore  
 
-**Privacy:** [privacy@example.com]  
-**Support:** [support@example.com] — align with `SettingsSupportConstants.supportEmailAddress` in the App before release.
+**Privacy & support:** tianjisupport@gmail.com (same address as `SettingsSupportConstants.supportEmailAddress` in the App)
 
 ---
 
@@ -215,5 +215,6 @@ We may update this Privacy Policy to reflect product, legal, or operational chan
 - **Product name:** TianJi  
 - **Platform:** Firebase iOS (SwiftUI app; backend Firebase Auth anonymous, Cloud Functions, Firestore ledger as implemented)  
 - **Launch scope (policy alignment):** Chart generation focus; reading/generative-AI features **out of scope** for this revision unless and until shipped and disclosed.  
-- **Support logging:** On-device diagnostic log and Contact-support flow per `SupportDiagnosticLog`, `SupportDiagnosticsBridge`, and `SupportEmailComposer` (no chart payloads or birth text in log by design).
+- **Support logging:** On-device diagnostic log and Contact-support flow per `SupportDiagnosticLog`, `SupportDiagnosticsBridge`, and `SupportEmailComposer` (no chart payloads or birth text in log by design).  
+- **Two Git check-ins (keep in sync):** Treat **`FirebaseApi/docs/privacy_policy.md`** as the **canonical** copy (commit to the **FirebaseApi** repo). When you change it, **mirror the same text** into the separate **Privacy_Policy** GitHub repo as root **`privacy_policy.md`** (used for **GitHub Pages** at `https://sstan36.github.io/Privacy_Policy/privacy_policy.md`; that repo also has **`index.html`** at root—do not duplicate that file in FirebaseApi `docs/`). The in-app link is **`SettingsSupportConstants.privacyPolicyURL`**.
 
