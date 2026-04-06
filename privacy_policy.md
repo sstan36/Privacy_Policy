@@ -18,8 +18,6 @@ This Privacy Policy explains what information is processed when you use our App,
 
 **Singapore (PDPA).** Where the Personal Data Protection Act 2012 applies to our activities, we intend to comply with its rules on collection, use, and disclosure of personal data, subject to exceptions in the Act. Official overview: [PDPC — Personal Data Protection Act](https://www.pdpc.gov.sg/overview-of-pdpa/the-legislation/personal-data-protection-act). We also have regard to PDPC’s [Advisory Guidelines on Key Concepts in the PDPA (PDF, 17 May 2022)](https://www.pdpc.gov.sg/-/media/files/pdpc/pdf-files/advisory-guidelines/ag-on-key-concepts/advisory-guidelines-on-key-concepts-in-the-pdpa-17-may-2022.pdf) when describing purpose, consent, and protection. PDPC materials are authoritative; this Policy is app-specific notice.
 
-**Further reading (non-authoritative).** [SingaporeLegalAdvice.com — Drafting a comprehensive privacy policy for a Singapore website](https://singaporelegaladvice.com/law-articles/drafting-comprehensive-privacy-policy-singapore-website/) (educational). [Law Society of Singapore — Privacy Policy](https://www.lawsociety.org.sg/privacy-policy/) is cited only as an example of PDPA-style structuring; we are not affiliated.
-
 **Apple.** The App is on the App Store. We follow applicable Apple program, review, and privacy-label requirements. See [Apple Privacy Policy](https://www.apple.com/legal/privacy/) and [App Store Review Guidelines](https://developer.apple.com/app-store/review/guidelines/). If the App Store listing or Apple rules conflict with this document, the listing and Apple’s published requirements govern for distribution.
 
 ---
