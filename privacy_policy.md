@@ -5,7 +5,7 @@
 **Product type:** BaZi (Four Pillars) chart application for iOS  
 **Bundle identifier:** `com.nexazenith.FirebaseApi`  
 
-**Published copy (this policy online):** [https://sstan36.github.io/Privacy_Policy/privacy_policy.md](https://sstan36.github.io/Privacy_Policy/privacy_policy.md)  
+**Published copy (this policy online):** [HTML (recommended)](https://sstan36.github.io/Privacy_Policy/privacy_policy.html) · [Markdown source](https://sstan36.github.io/Privacy_Policy/privacy_policy.md)  
 
 **Effective date:** 30 March 2026  
 **Last updated:** 30 March 2026  
@@ -216,5 +216,5 @@ Singapore
 - **Platform:** Firebase iOS (SwiftUI app; backend Firebase Auth anonymous, Cloud Functions, Firestore ledger as implemented)  
 - **Launch scope (policy alignment):** Chart generation focus; reading/generative-AI features **out of scope** for this revision unless and until shipped and disclosed.  
 - **Support logging:** On-device diagnostic log and Contact-support flow per `SupportDiagnosticLog`, `SupportDiagnosticsBridge`, and `SupportEmailComposer` (no chart payloads or birth text in log by design).  
-- **Two Git check-ins (keep in sync):** Treat **`FirebaseApi/docs/privacy_policy.md`** as the **canonical** copy (commit to the **FirebaseApi** repo). When you change it, **mirror the same text** into the separate **Privacy_Policy** GitHub repo as root **`privacy_policy.md`** (used for **GitHub Pages** at `https://sstan36.github.io/Privacy_Policy/privacy_policy.md`; that repo also has **`index.html`** at root—do not duplicate that file in FirebaseApi `docs/`). The in-app link is **`SettingsSupportConstants.privacyPolicyURL`**.
+- **Two Git check-ins (keep in sync):** Treat **`FirebaseApi/docs/privacy_policy.md`** as the **canonical** copy (commit to the **FirebaseApi** repo). When you change policy text, update **`privacy_policy.md`**, then refresh **`privacy_policy.html`** (same substance, styled for the web) and mirror into the **Privacy_Policy** repo root: **`index.html`**, **`privacy_policy.html`**, **`privacy_policy.md`**. **GitHub Pages** primary URL: `https://sstan36.github.io/Privacy_Policy/privacy_policy.html`. The in-app link is **`SettingsSupportConstants.privacyPolicyURL`** (must use the `.html` page).
 
