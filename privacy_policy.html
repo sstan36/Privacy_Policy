@@ -9,257 +9,266 @@
   <title>Privacy Policy — TianJi</title>
   <style>
     :root {
-      --text: #1c1814;
-      --text-muted: #4a423a;
-      --bg: #faf6ef;
-      --card: #fffcf5;
-      --rule: #d4cbbf;
-      --accent: #2c5282;
-      --link: #1a4480;
-      --maxw: 42rem;
+      --text: #1a1a1a;
+      --muted: #5c5c5c;
+      --bg: #ffffff;
+      --surface: #f7f7f5;
+      --border: #e8e8e4;
+      --link: #0f4c81;
+      --link-hover: #0a3a66;
+      --maxw: 40rem;
     }
     * { box-sizing: border-box; }
     html {
-      font-size: 106%;
+      font-size: 100%;
       -webkit-text-size-adjust: 100%;
     }
     body {
       margin: 0;
-      font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       color: var(--text);
       background: var(--bg);
-      line-height: 1.55;
+      line-height: 1.65;
     }
     .wrap {
       max-width: var(--maxw);
       margin: 0 auto;
-      padding: 2rem 1.25rem 3.5rem;
+      padding: 2.5rem 1.5rem 4rem;
     }
-    .masthead {
-      background: var(--card);
-      border: 1px solid var(--rule);
-      border-radius: 4px;
-      padding: 1.35rem 1.35rem 1.15rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 1px 2px rgba(28, 24, 20, 0.06);
+    .title-block h1 {
+      margin: 0 0 0.5rem;
+      font-size: 1.875rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      color: var(--text);
     }
-    .masthead h1 {
-      margin: 0 0 0.85rem;
-      font-size: 1.65rem;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      line-height: 1.25;
+    .title-block .subtitle {
+      margin: 0;
+      font-size: 0.9375rem;
+      color: var(--muted);
+      font-weight: 400;
     }
-    .meta {
-      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      font-size: 0.8rem;
-      color: var(--text-muted);
+    .doc-meta {
+      margin: 1.75rem 0 0;
+      padding: 1rem 0 0;
+      border-top: 1px solid var(--border);
+      font-size: 0.8125rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .doc-meta dl {
+      margin: 0;
+      display: grid;
+      gap: 0.35rem 1.5rem;
+      grid-template-columns: auto 1fr;
+    }
+    .doc-meta dt {
+      margin: 0;
+      font-weight: 500;
+      color: var(--text);
+    }
+    .doc-meta dd {
+      margin: 0;
+    }
+    .caveat {
+      margin: 2rem 0;
+      padding: 1.15rem 1.25rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 0.875rem;
       line-height: 1.65;
+      color: var(--text);
     }
-    .meta p { margin: 0.25rem 0; }
-    .meta strong { color: var(--text); font-weight: 600; }
+    .caveat p {
+      margin: 0 0 0.75rem;
+    }
+    .caveat p:last-child {
+      margin-bottom: 0;
+    }
     main {
-      font-size: 0.98rem;
+      font-size: 0.9375rem;
     }
-    main > p.intro {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      margin-top: 0;
+    main p {
+      margin: 0 0 1rem;
+    }
+    main ul {
+      margin: 0 0 1rem;
+      padding-left: 1.25rem;
+    }
+    main li {
+      margin: 0.4rem 0;
+    }
+    main li::marker {
+      color: var(--muted);
     }
     h2 {
-      font-size: 1.2rem;
+      font-size: 1.125rem;
       font-weight: 600;
-      margin: 2.25rem 0 0.75rem;
-      padding-top: 0.25rem;
-      border-top: 1px solid var(--rule);
-      letter-spacing: -0.01em;
+      margin: 2.5rem 0 0.75rem;
+      letter-spacing: -0.02em;
+      line-height: 1.35;
+      color: var(--text);
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
     }
-    h2:first-of-type {
-      border-top: 0;
-      margin-top: 0;
+    main > h2:first-of-type {
+      border-top: none;
       padding-top: 0;
+      margin-top: 2rem;
     }
     h3 {
-      font-size: 1.02rem;
+      font-size: 1rem;
       font-weight: 600;
-      margin: 1.35rem 0 0.5rem;
+      margin: 1.5rem 0 0.5rem;
+      color: var(--text);
     }
-    p { margin: 0.65rem 0; }
-    ul {
-      margin: 0.5rem 0 0.75rem;
-      padding-left: 1.35rem;
-    }
-    li { margin: 0.35rem 0; }
-    li::marker { color: var(--text-muted); }
     a {
       color: var(--link);
       text-decoration: underline;
       text-underline-offset: 2px;
     }
-    a:hover { color: var(--accent); }
-    hr {
-      border: 0;
-      border-top: 1px solid var(--rule);
-      margin: 1.75rem 0;
+    a:hover {
+      color: var(--link-hover);
     }
-    code,
-    .meta code {
+    code {
       font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-      font-size: 0.88em;
-      background: rgba(212, 203, 191, 0.35);
-      padding: 0.12em 0.35em;
-      border-radius: 3px;
+      font-size: 0.85em;
+      background: var(--surface);
+      padding: 0.15em 0.4em;
+      border-radius: 4px;
+      border: 1px solid var(--border);
     }
     .table-wrap {
       overflow-x: auto;
-      margin: 0.85rem 0 1rem;
+      margin: 1rem 0;
+      border: 1px solid var(--border);
+      border-radius: 6px;
       -webkit-overflow-scrolling: touch;
     }
     table {
       width: 100%;
       border-collapse: collapse;
-      font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
-      font-size: 0.82rem;
+      font-size: 0.8125rem;
     }
     th, td {
-      border: 1px solid var(--rule);
-      padding: 0.55rem 0.65rem;
+      padding: 0.65rem 0.85rem;
       text-align: left;
       vertical-align: top;
+      border-bottom: 1px solid var(--border);
+    }
+    tr:last-child td {
+      border-bottom: none;
     }
     th {
-      background: rgba(212, 203, 191, 0.25);
       font-weight: 600;
+      background: var(--surface);
+      color: var(--text);
     }
-    .contact-card {
-      background: var(--card);
-      border: 1px solid var(--rule);
-      border-radius: 4px;
+    .contact-block {
+      margin-top: 0.75rem;
       padding: 1rem 1.1rem;
-      margin-top: 0.5rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 0.9375rem;
+    }
+    .contact-block p {
+      margin: 0 0 0.5rem;
+    }
+    .contact-block p:last-child {
+      margin-bottom: 0;
     }
     footer.site {
-      font-family: ui-sans-serif, system-ui, sans-serif;
+      margin-top: 3rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border);
       font-size: 0.75rem;
-      color: var(--text-muted);
-      margin-top: 2.5rem;
-      padding-top: 1rem;
-      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      line-height: 1.5;
     }
     @media print {
       body { background: #fff; }
-      .masthead { box-shadow: none; }
+      .caveat { break-inside: avoid; }
     }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <header class="masthead">
-      <h1>Privacy Policy — TianJi (Firebase iOS)</h1>
-      <div class="meta">
-        <p><strong>Controller:</strong> Michael Tan (“we,” “us,” “our”)</p>
-        <p><strong>App:</strong> TianJi — Your Destiny is unfolding…</p>
-        <p><strong>Product type:</strong> BaZi (Four Pillars) chart application for iOS</p>
-        <p><strong>Bundle identifier:</strong> <code>com.nexazenith.FirebaseApi</code></p>
-        <p><strong>Effective date:</strong> 30 March 2026 · <strong>Last updated:</strong> 30 March 2026</p>
-      </div>
+    <header class="title-block">
+      <h1>Privacy Policy</h1>
+      <p class="subtitle">TianJi (Firebase iOS) — BaZi (Four Pillars) chart application</p>
     </header>
 
-    <main>
-      <p class="intro">This Privacy Policy explains what information is processed when you use our App, how we use it, and your choices. <strong>Privacy laws vary by region.</strong> Before you rely on this document for compliance or litigation, consider <strong>having qualified counsel review</strong> the final version.</p>
+    <div class="doc-meta">
+      <dl>
+        <dt>Controller</dt>
+        <dd>Michael Tan (“we”, “us”, “our”)</dd>
+        <dt>Bundle identifier</dt>
+        <dd><code>com.nexazenith.FirebaseApi</code></dd>
+        <dt>Effective date</dt>
+        <dd>30 March 2026</dd>
+        <dt>Last updated</dt>
+        <dd>30 March 2026</dd>
+      </dl>
+    </div>
 
-      <h2>Summary (plain language)</h2>
-      <ul>
-        <li><strong>Launch focus:</strong> At this time, the App is built around <strong>BaZi (Four Pillars) chart generation</strong>. Features such as narrative readings may be <strong>disabled or removed</strong> from the build you download; only the practices described for <strong>chart generation and core app operation</strong> apply unless we ship and disclose additional features.</li>
-        <li><strong>No ads, no data brokerage:</strong> We <strong>do not sell</strong> personal information. We <strong>do not</strong> use your information for <strong>cross-app advertising</strong> or <strong>behavioural advertising</strong> through data brokers.</li>
-        <li><strong>Minimal processing:</strong> We process information <strong>only</strong> to operate the App (charts, optional purchases, reliability, and support you initiate). We <strong>do not</strong> ask for contacts, your photo library, or precise location for chart features.</li>
-        <li><strong>Support diagnostics (optional):</strong> If you choose <strong>Contact support</strong> in Settings, you may send us a short, <strong>on-device diagnostic log</strong> plus basic device/app metadata. That log is designed <strong>not</strong> to include birth details, chart payloads, or other sensitive content—see <strong>Support diagnostics and email</strong> below.</li>
-      </ul>
-      <p>If anything in this Policy conflicts with the <strong>App Store listing</strong>, in-app disclosures, or <strong>Apple’s requirements</strong>, those sources should be reconciled with counsel before release—</p>
+    <aside class="caveat" aria-label="Important notice">
+      <p>This Policy describes how we handle personal data in connection with the TianJi iOS app and related services (for example, chart generation and optional online features). If you are in Singapore, we aim to align with the expectations of the Personal Data Protection Act (PDPA) concerning notice, reasonable use, and protection of personal data, to the extent those rules apply to how we operate.</p>
+      <p>Users may be located in other countries; additional laws (for example in the European Union, United Kingdom, or United States) may also apply to you. This Policy is not legal advice and does not list every possible legal obligation. Where this Policy differs from the App Store listing, in-app disclosures, or Apple’s requirements, those should be reconciled with qualified counsel.</p>
+    </aside>
+
+    <main>
+      <p>We respect your privacy. This document explains what information we process when you use the App, why we process it, and what choices you may have. Please read it together with our Terms of Use and Disclaimer in the App.</p>
+
+      <h2>Summary</h2>
+      <p>The App is built around BaZi (Four Pillars) chart generation. Other features, such as narrative readings, may not be available in your build; only what we actually ship and describe in the App Store and this Policy applies to you.</p>
+      <p>We do not sell your personal information and do not use it for cross-app or behavioural advertising through data brokers. We process data to run the App (charts, optional purchases, reliability, and support you initiate). We do not ask for access to your contacts, photo library, or precise location for chart features.</p>
+      <p>If you use Contact support in Settings, you may choose to send a short on-device diagnostic excerpt and basic device or app metadata. We design that log to avoid chart payloads, birth details, and similar sensitive content. See the section on support below.</p>
 
       <h2>1. Who we are</h2>
-      <p>This Privacy Policy applies to <strong>Michael Tan</strong> and the TianJi iOS application and its use of <strong>Google Firebase</strong> (and, where applicable, <strong>Apple</strong> services such as the App Store and StoreKit).</p>
-      <p><strong>Contact details</strong> appear in <strong>Section 16 (Contact us)</strong>.</p>
+      <p>This Policy applies to Michael Tan and the TianJi iOS application, including use of Google Firebase and, where relevant, Apple services (App Store, StoreKit). Contact details are at the end of this page.</p>
 
-      <h2>2. Scope and launch product</h2>
-      <p>The App lets you create and manage <strong>BaZi charts</strong> using traditional computational methods, with optional online support through our backend. <strong>This policy covers:</strong></p>
+      <h2>2. Scope</h2>
+      <p>The App lets you create and manage BaZi charts with traditional computational methods and optional online support. This Policy covers:</p>
       <ul>
-        <li>Information processed <strong>on your device</strong></li>
-        <li>Information sent to <strong>Firebase</strong> (Authentication, Cloud Functions, Firestore, and related Google Cloud infrastructure as configured for our project)</li>
-        <li>Information you <strong>voluntarily email</strong> to us through <strong>Contact support</strong></li>
+        <li>Information processed on your device;</li>
+        <li>Information sent to Firebase (Authentication, Cloud Functions, Firestore, and related Google Cloud infrastructure as configured for our project); and</li>
+        <li>Information you voluntarily email us when you contact support.</li>
       </ul>
-      <p>It does <strong>not</strong> cover third-party sites or services we do not control.</p>
+      <p>It does not govern third-party websites or services we do not control.</p>
 
-      <h2>3. Categories of information we process</h2>
-      <p>We align our descriptions with how <strong>Apple</strong> and common privacy laws refer to “personal information” or “personal data.” <strong>Information you type in</strong> to generate a chart (for example <strong>birth date, birth time, timezone, and gender</strong>) is <strong>personal information</strong> because it identifies or relates to a person. We process it <strong>only</strong> as described here—not for unrelated marketing dossiers or resale.</p>
+      <h2>3. Categories of information</h2>
+      <p>We describe data in plain language consistent with how Apple and many laws refer to personal information or personal data. Information you enter to generate a chart (such as birth date, birth time, timezone, and gender) can identify or relate to a person. We use it only as described here, not for unrelated marketing profiles or resale.</p>
 
-      <h3>3.1 Information you provide (chart inputs)</h3>
-      <p>When you create or edit a chart, you may enter:</p>
-      <ul>
-        <li>An optional <strong>label or name</strong> for the chart</li>
-        <li><strong>Date of birth</strong>, <strong>time of birth</strong>, <strong>timezone</strong>, and <strong>gender</strong> (needed for BaZi calculation)</li>
-        <li>Any notes or labels you choose to store <strong>locally</strong> with the chart</li>
-      </ul>
-      <p>You should avoid entering unnecessary sensitive information; you are responsible for the accuracy of what you supply.</p>
+      <h3>3.1 What you provide (chart inputs)</h3>
+      <p>When you create or edit a chart, you may enter an optional label or name; date of birth, time of birth, timezone, and gender (needed for calculation); and notes stored locally with the chart. Avoid entering more sensitive data than you need; you are responsible for accuracy.</p>
 
-      <h3>3.2 Information stored on your device</h3>
-      <p>The App uses <strong>Apple frameworks</strong> to store data <strong>on your device</strong>, including:</p>
-      <ul>
-        <li><strong>Core Data:</strong> Saved charts and related metadata (for example, validation flags or timestamps if present in your build)</li>
-        <li><strong>Keychain:</strong> Security-sensitive identifiers related to <strong>entitlements</strong> (for example, chart-slot or installation-correlation identifiers), consistent with iOS practice</li>
-        <li><strong>UserDefaults</strong> (or similar): Preferences such as disclaimer acceptance, language, or internal counters used for app state</li>
-      </ul>
-      <p>Unless that data is sent to our servers as described below—or you export or share it yourself—we <strong>cannot access</strong> purely on-device content.</p>
+      <h3>3.2 On your device</h3>
+      <p>We use Apple frameworks to store data on your device, including Core Data (charts and related metadata), Keychain (identifiers related to entitlements, such as chart slots or installation correlation), and UserDefaults or similar (preferences such as disclaimer acceptance and language). Unless sent to our servers or exported by you, we cannot access purely on-device content.</p>
 
-      <h3>3.3 Information processed on our servers (Firebase)</h3>
-      <p>When you use features that call our backend (for example <strong>generating or validating a chart</strong>, or synchronizing <strong>purchase-related</strong> entitlements), the App communicates with <strong>Firebase</strong>. Depending on the operation, processing may include:</p>
-      <ul>
-        <li>A <strong>Firebase Anonymous Authentication</strong> identifier (Firebase UID)</li>
-        <li><strong>App version</strong> and a <strong>device installation correlation identifier</strong> used for <strong>support</strong> and <strong>consistent entitlements</strong> after reinstall or restore</li>
-        <li><strong>Firestore</strong> fields needed to operate the product (for example, counts or limits related to charts and purchased capacity, sync timestamps, and fields the server maintains for integrity)</li>
-        <li><strong>Request payloads</strong> needed to perform the operation—typically <strong>birth-related inputs</strong> and/or <strong>structured BaZi data</strong> returned from chart computation</li>
-      </ul>
-      <p><strong>Chart inputs and outputs are sensitive.</strong> We transmit them over encrypted connections and restrict access on the backend using industry-standard controls.</p>
+      <h3>3.3 On our servers (Firebase)</h3>
+      <p>When you use backend features (for example generating or validating a chart, or syncing purchase-related entitlements), processing may include: a Firebase Anonymous Authentication identifier; app version and a device installation correlation identifier for support and consistent entitlements after reinstall or restore; Firestore fields needed to run the product (such as counts or limits, sync timestamps, and server-maintained integrity fields); and request payloads needed for the operation (typically birth-related inputs and structured BaZi data from computation). Chart inputs and outputs are sensitive; we use encryption in transit and reasonable access controls on the backend.</p>
 
-      <h3>3.4 Automatic / technical data</h3>
-      <p>Like most networked apps, <strong>Google</strong> (Firebase / Google Cloud) and we may process <strong>technical data</strong> when you use the App, such as <strong>IP address</strong>, <strong>request metadata</strong>, and (depending on project configuration) <strong>diagnostics or stability</strong> data <strong>if</strong> those products are linked in a given build. For Google’s practices, see <a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer">Firebase Privacy and Security</a>.</p>
-      <p>We do <strong>not</strong> intend at launch to use such data for advertising profiling; any material change will be reflected here and, where required, in-app.</p>
+      <h3>3.4 Technical data</h3>
+      <p>Like most networked apps, Google (Firebase / Google Cloud) and we may process technical data such as IP address, request metadata, and, depending on your build configuration, diagnostics or stability data if those products are linked. See <a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer">Firebase Privacy and Security</a>. We do not intend to use such data for advertising profiling at launch; material changes will be reflected here and, where required, in the App.</p>
 
-      <h2>4. Support diagnostics and email (user-initiated)</h2>
-      <p>When something goes wrong, you can use <strong>Settings → Contact support</strong> (if available in your build) to open an email to us. <strong>Nothing is sent automatically</strong>; you choose whether to send the message.</p>
-      <p><strong>What may be included when you contact us:</strong></p>
-      <ul>
-        <li><strong>Device and app metadata</strong> our composer adds for troubleshooting (for example, model, iOS version, app version, locale—see your build’s implementation)</li>
-        <li>A <strong>recent excerpt</strong> of an <strong>on-device diagnostic log</strong> maintained for support</li>
-      </ul>
-      <p><strong>What we design the diagnostic log to exclude:</strong> We intend <strong>not</strong> to write <strong>raw chart JSON</strong>, <strong>birth dates/times</strong>, <strong>prompt text</strong>, or similar <strong>identifying or chart content</strong> into this log. Entries are meant to be <strong>short, technical summaries</strong> (for example, error domain, code, and brief description) to help us reproduce issues <strong>without</strong> unnecessary personal detail.</p>
-      <p>If you <strong>manually</strong> type personal information into the email body, that content is treated as information you provided to us for support and is used <strong>only</strong> to respond to your request, subject to ordinary retention for support and legal compliance.</p>
+      <h2>4. Support diagnostics and email</h2>
+      <p>You may use Settings → Contact support (if available) to email us. Nothing is sent automatically; you decide whether to send the message. The composer may attach device and app metadata (for example model, iOS version, app version, locale) and a recent excerpt of an on-device diagnostic log. We aim not to place raw chart JSON, birth dates or times, prompt text, or similar identifying chart content in that log; entries should be short technical summaries to help reproduce issues.</p>
+      <p>If you type personal information in the email body, we use it only to respond and for ordinary support and legal retention, subject to applicable law.</p>
 
       <h2>5. How we use information</h2>
-      <p>We use information to:</p>
-      <ul>
-        <li><strong>Generate, validate (if enabled in your build), display, and store</strong> BaZi charts</li>
-        <li>Maintain <strong>anonymous authentication</strong>, <strong>rate limits</strong>, <strong>entitlements</strong>, and <strong>ledger</strong> consistency where those features exist</li>
-        <li><strong>Operate, secure, and improve</strong> the service (for example, fixing outages or abuse patterns)</li>
-        <li><strong>Respond</strong> to support requests you send</li>
-        <li><strong>Comply with law</strong> and enforce our <strong>Terms of Use</strong></li>
-      </ul>
-      <p>Charts and metadata are <strong>not</strong> a substitute for medical, legal, financial, or other professional advice. See your <strong>Terms of Use &amp; Disclaimer</strong>.</p>
+      <p>We use information to generate, validate (if enabled), display, and store BaZi charts; maintain anonymous authentication, rate limits, entitlements, and ledger consistency where those exist; operate, secure, and improve the service; respond to support requests; and comply with law and our Terms of Use. Chart output is not medical, legal, financial, or other professional advice; see the Terms of Use and Disclaimer in the App.</p>
 
       <h2>6. Generative AI and readings</h2>
-      <p><strong>At launch,</strong> this Policy describes an App centered on <strong>chart generation</strong>. We <strong>do not</strong> describe separate <strong>AI narrative reading</strong> products here. If we later enable readings or other <strong>generative-AI</strong> features in a public build, we will <strong>update this Privacy Policy</strong> and, where required, <strong>App Store privacy answers</strong> and in-app disclosures <strong>before</strong> or <strong>concurrent with</strong> that release.</p>
+      <p>At launch this Policy describes chart-focused processing. We do not separately describe AI narrative reading products here. If we enable readings or other generative-AI features in a public build, we will update this Policy and, where required, App Store disclosures and in-app notice before or when that happens.</p>
 
-      <h2>7. Legal bases (EEA / UK–style laws)</h2>
-      <p>Where <strong>GDPR</strong> or similar laws apply, we typically rely on:</p>
-      <ul>
-        <li><strong>Performance of a contract</strong> (providing the App and features you request, including paid items)</li>
-        <li><strong>Legitimate interests</strong> (security, fraud prevention, improving reliability, support correlation), balanced against your rights</li>
-        <li><strong>Consent</strong> where the law requires it (for example, certain optional analytics, if we add them and ask clearly)</li>
-      </ul>
-      <p>Contact us if you need jurisdiction-specific information.</p>
+      <h2>7. Legal bases (EEA / UK-style)</h2>
+      <p>Where GDPR or similar laws apply, we typically rely on performance of a contract (providing the App and requested features, including paid items), legitimate interests (security, fraud prevention, reliability, support correlation) balanced against your rights, and consent where the law requires it (for example optional analytics, if we add them with clear consent). Contact us if you need jurisdiction-specific information.</p>
 
       <h2>8. Sharing and subprocessors</h2>
-      <p>We share information with:</p>
+      <p>We share information with recipients that help us run the App:</p>
       <div class="table-wrap">
         <table>
           <thead>
@@ -270,59 +279,52 @@
           </thead>
           <tbody>
             <tr>
-              <td><strong>Google Firebase / Google Cloud</strong></td>
+              <td>Google Firebase / Google Cloud</td>
               <td>Hosting, authentication, database, server logic — see <a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer">Firebase Privacy and Security</a></td>
             </tr>
             <tr>
-              <td><strong>Apple</strong></td>
-              <td>App distribution, <strong>App Store</strong> purchases, <strong>StoreKit</strong>, and platform services governed by <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer">Apple’s Privacy Policy</a></td>
+              <td>Apple</td>
+              <td>App distribution, App Store purchases, StoreKit — see <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer">Apple’s Privacy Policy</a></td>
             </tr>
             <tr>
-              <td><strong>Professional advisers or authorities</strong></td>
+              <td>Professional advisers or authorities</td>
               <td>When required by law or to protect rights and safety</td>
             </tr>
           </tbody>
         </table>
       </div>
-      <p>We <strong>do not sell</strong> personal information <strong>for money</strong>. We <strong>do not</strong> share information for <strong>cross-context behavioural advertising</strong> as part of our business model.</p>
+      <p>We do not sell personal information for money and do not share it for cross-context behavioural advertising as part of our business model.</p>
 
       <h2>9. Retention</h2>
-      <ul>
-        <li><strong>On-device data</strong> remains until you delete it, uninstall the App, or erase the device.</li>
-        <li><strong>Server-side data</strong> is kept only as long as needed to run the service, comply with law, resolve disputes, and enforce agreements. Maintenance or deletion routines may apply to anonymous IDs and Firestore documents.</li>
-        <li><strong>Support emails and related logs</strong> may be retained for a <strong>reasonable period</strong> to handle your inquiry and for internal quality assurance, unless law requires longer retention.</li>
-      </ul>
+      <p>On-device data remains until you delete it, uninstall the App, or erase the device. Server-side data is kept as long as needed to provide the service, comply with law, resolve disputes, and enforce agreements; maintenance or deletion routines may apply to anonymous identifiers and Firestore documents. Support mail and related logs may be kept for a reasonable period unless law requires longer retention.</p>
 
       <h2>10. Security</h2>
-      <p>We use measures appropriate to the risk, including <strong>encryption in transit (HTTPS)</strong>, access controls for backend resources, and <strong>server-side</strong> handling of secrets (<strong>API keys are not embedded in the client for server-only operations</strong>). <strong>No method of storage or transmission is completely secure.</strong></p>
+      <p>We use measures appropriate to the risk, including encryption in transit (HTTPS), access controls on backend resources, and server-side handling of API keys (they are not embedded in the client for server-only operations). No storage or transmission method is completely secure.</p>
 
-      <h2>11. Children’s privacy</h2>
-      <p>The App is <strong>not directed to children</strong> under <strong>13</strong> (or the higher age required in your region). We do <strong>not knowingly</strong> collect personal information from children. If you believe we have, contact us and we will take appropriate steps.</p>
+      <h2>11. Children</h2>
+      <p>The App is not directed at children under 13 (or the higher age required where you live). We do not knowingly collect personal information from children. If you believe we have, contact us and we will take appropriate steps.</p>
 
       <h2>12. International transfers</h2>
-      <p>If you use the App from outside the region where our Firebase project is hosted, data may be processed in the <strong>United States</strong> and other regions where <strong>Google Cloud</strong> operates. Where required, we rely on appropriate mechanisms (for example, <strong>standard contractual clauses</strong>).</p>
+      <p>Data may be processed in the United States and other regions where Google Cloud operates. Where required, we rely on appropriate safeguards (for example standard contractual clauses).</p>
 
       <h2>13. Your rights and choices</h2>
-      <p>Depending on where you live, you may have rights to <strong>access</strong>, <strong>correct</strong>, <strong>delete</strong>, <strong>export</strong>, <strong>object to</strong>, or <strong>restrict</strong> processing, and to <strong>withdraw consent</strong> where processing is consent-based.</p>
-      <p>Because we often use <strong>anonymous Firebase accounts</strong> tied to a device installation, <strong>verifying identity</strong> for account-level requests may be limited compared with email-password services. <strong>Deleting the App</strong>, clearing local data, or contacting us for <strong>server-side deletion</strong> (if we offer a process) may be necessary.</p>
-      <p><strong>iOS:</strong> You can uninstall the App, adjust tracking-related settings where Apple provides them, and control network access.</p>
-      <p>To exercise rights, email <a href="mailto:tianjisupport@gmail.com">tianjisupport@gmail.com</a>. We will respond within the time required by applicable law.</p>
+      <p>Depending on where you live, you may have rights to access, correct, delete, export, object to, or restrict processing, or to withdraw consent where processing is consent-based. Because we often use anonymous Firebase accounts tied to a device, verifying identity for some requests may be limited. Deleting the App, clearing local data, or contacting us about server-side deletion (if available) may be necessary. On iOS you can also adjust tracking-related settings where Apple provides them.</p>
+      <p>To exercise rights, email <a href="mailto:tianjisupport@gmail.com">tianjisupport@gmail.com</a>. We respond within the time required by applicable law where that applies.</p>
 
-      <h2>14. California and other U.S. state privacy notices (summary)</h2>
-      <p>Under certain <strong>U.S. state</strong> privacy laws, you may have rights such as <strong>access</strong>, <strong>deletion</strong>, <strong>correction</strong>, <strong>opt-out of sale/sharing</strong>, and <strong>appeal</strong>. We <strong>do not “sell”</strong> personal information in the conventional sense described above. For requests, contact <a href="mailto:tianjisupport@gmail.com">tianjisupport@gmail.com</a>. We <strong>do not discriminate</strong> against you for exercising these rights.</p>
-      <p><strong>Categories of personal information</strong> we process are described in <strong>Section 3</strong>. <strong>Purposes</strong> are described in <strong>Section 5</strong>.</p>
+      <h2>14. California and other U.S. states (summary)</h2>
+      <p>Under some U.S. state laws you may have rights such as access, deletion, correction, opt-out of certain sale or sharing, and appeal. We do not sell personal information in the conventional sense used in those laws. For requests, contact <a href="mailto:tianjisupport@gmail.com">tianjisupport@gmail.com</a>. We do not discriminate for exercising these rights. Categories of information are described in Section 3; purposes in Section 5.</p>
 
-      <h2>15. Changes to this Policy</h2>
-      <p>We may update this Privacy Policy to reflect product, legal, or operational changes. We will revise the <strong>“Last updated”</strong> date and, where appropriate, provide <strong>additional notice in the App</strong> or by other lawful means.</p>
+      <h2>15. Changes</h2>
+      <p>We may update this Policy from time to time. We will change the “Last updated” date and, where appropriate, give additional notice in the App or otherwise as required by law.</p>
 
       <h2>16. Contact us</h2>
-      <div class="contact-card">
-        <p style="margin-top:0"><strong>Michael Tan</strong><br />Singapore</p>
-        <p style="margin-bottom:0"><strong>Privacy &amp; support:</strong> <a href="mailto:tianjisupport@gmail.com">tianjisupport@gmail.com</a></p>
+      <div class="contact-block">
+        <p>Michael Tan<br />Singapore</p>
+        <p>Privacy and support: <a href="mailto:tianjisupport@gmail.com">tianjisupport@gmail.com</a></p>
       </div>
 
       <footer class="site">
-        TianJi — Privacy Policy. Plain-language summary is not a substitute for the full sections above.
+        © Michael Tan. TianJi. The summary above is for convenience only and does not replace the full Policy. For the version linked from the App, use this page as published at the effective date shown.
       </footer>
     </main>
   </div>
