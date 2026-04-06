@@ -231,7 +231,7 @@
       <p><strong>No ads, no sale of personal data.</strong> We do not show third-party ads. We do not sell personal information. We do not use your information for cross-app or cross-website tracking for advertising.</p>
       <p><strong>No analytics or crash reporting (current).</strong> We do not use Firebase Analytics, Crashlytics, or other third-party analytics or crash reporting services in the App at this time.</p>
       <p><strong>No push or Remote Config.</strong> We do not use Firebase Cloud Messaging (push notifications), Firebase Remote Config, AdMob, or similar advertising or tracking SDKs.</p>
-      <p><strong>Backend.</strong> We use Firebase Cloud Functions, Firestore, Firebase App Check with Apple App Attest on supported devices, Firebase Anonymous Authentication (pseudonymous ID per installation for backend calls), and Google Secret Manager (or the same project’s server-side secret/parameter system) so secrets stay off the device.</p>
+      <p><strong>Backend.</strong> We use Firebase Cloud Functions, Firestore, Firebase App Check with Apple App Attest on supported devices, and Firebase Anonymous Authentication (pseudonymous ID per installation for backend calls). We use secure server-side secret storage to keep confidential credentials off the device and out of the client app.</p>
       <p><strong>Minimal processing.</strong> We process information only to operate the App (charts, optional purchases, security, reliability, and support you start). We do not ask for access to your contacts, photo library, or precise location for chart features.</p>
       <p><strong>Support diagnostics.</strong> If you use Contact support in Settings, you may send a short on-device diagnostic excerpt and basic device or app metadata only in that email. We design the log not to include birth details, raw chart JSON, or similar content unless you put them in the email body. See the support section below.</p>
       <p>If anything in this Policy conflicts with the App Store listing, in-app disclosures, or Apple’s requirements, treat the listing and Apple’s rules as controlling for distribution and reconcile any mismatch with qualified counsel.</p>
@@ -254,7 +254,7 @@
           <tbody>
             <tr>
               <td>Firebase Cloud Functions</td>
-              <td>Runs server-side logic when you call the backend (for example chart-related requests). Secrets needed for those calls (such as API keys) are kept in Google Secret Manager or another Google Cloud server-side secret/parameter store, not in the App binary.</td>
+              <td>Runs server-side logic when you call the backend (for example chart-related requests). Confidential credentials needed for those calls (such as API keys) are kept in secure server-side secret storage, not in the client app.</td>
             </tr>
             <tr>
               <td>Firestore</td>
@@ -317,7 +317,7 @@
           <tbody>
             <tr>
               <td>Google (Firebase / Google Cloud)</td>
-              <td>Cloud Functions, Firestore, App Check, Anonymous Authentication, and Secret Manager (or equivalent server secret storage) as described in Section 2. See <a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer">Firebase Privacy and Security</a>.</td>
+              <td>Cloud Functions, Firestore, App Check, Anonymous Authentication, and secure server-side secret storage for credentials as described in Section 2. See <a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer">Firebase Privacy and Security</a>.</td>
             </tr>
             <tr>
               <td>Apple</td>
@@ -338,7 +338,7 @@
       <p><strong>Support emails</strong> may be kept for a reasonable period to finish the thread and for internal quality, unless law requires longer retention.</p>
 
       <h2>10. Security</h2>
-      <p>We use measures appropriate to the risk: HTTPS, access controls on cloud resources, Firebase App Check to reduce abuse, and server-only storage of sensitive credentials in Secret Manager (or the same kind of managed secret system) so they are not embedded in the client for server operations. No storage or transmission method is completely secure.</p>
+      <p>We use measures appropriate to the risk: HTTPS, access controls on cloud resources, Firebase App Check to reduce abuse, and secure server-side secret storage so confidential credentials are not embedded in the client app for server operations. No storage or transmission method is completely secure.</p>
 
       <h2>11. Children</h2>
       <p>The App is not directed at children under 13 (or the higher age required where you live). We do not knowingly collect personal information from children. If you believe we have, contact us and we will take appropriate steps.</p>

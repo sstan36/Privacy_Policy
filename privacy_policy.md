@@ -28,7 +28,7 @@ This Privacy Policy explains what information is processed when you use our App,
 - **No ads, no sale of personal data:** We **do not** show third-party ads. We **do not** sell personal information. We **do not** use your information for **cross-app or cross-website tracking** for advertising.
 - **No analytics or crash reporting (current):** We **do not** use **Firebase Analytics**, **Crashlytics**, or other third-party **analytics or crash reporting** services in the App **at this time**.
 - **No push or Remote Config:** We **do not** use **Firebase Cloud Messaging** (push notifications), **Firebase Remote Config**, **AdMob**, or similar advertising or tracking SDKs.
-- **Backend:** We use **Firebase Cloud Functions**, **Firestore**, **Firebase App Check** with **Apple App Attest** (on supported devices), **Firebase Anonymous Authentication** (pseudonymous ID per installation for backend calls), and **Google Secret Manager** (or the same project’s **server-side secret/parameter system**) so **secrets stay off the device**.
+- **Backend:** We use **Firebase Cloud Functions**, **Firestore**, **Firebase App Check** with **Apple App Attest** (on supported devices), and **Firebase Anonymous Authentication** (pseudonymous ID per installation for backend calls). We use secure server-side secret storage to keep confidential credentials off the device and out of the client app.
 - **Minimal processing:** We process information **only** to operate the App (charts, optional purchases, security, reliability, and support **you** start). We **do not** ask for contacts, your photo library, or precise location **for chart features**.
 - **Support diagnostics (optional):** If you choose **Contact support** in Settings, you may send a short **on-device diagnostic log** and basic device/app metadata **only in that email**. We design the log **not** to include birth details, raw chart JSON, or similar content unless **you** put them in the email body. See **Support diagnostics and email** below.
 
@@ -60,7 +60,7 @@ We use **only** these parts of Firebase / Google Cloud for the live App:
 
 | What | Role |
 |------|------|
-| **Firebase Cloud Functions** | Runs **server-side** logic when you call the backend (for example chart-related requests). **Secrets** needed for those calls (such as API keys) are kept in **Google Secret Manager** or another **Google Cloud server-side secret/parameter store**, **not** in the App binary. |
+| **Firebase Cloud Functions** | Runs **server-side** logic when you call the backend (for example chart-related requests). **Confidential credentials** needed for those calls (such as API keys) are kept in **secure server-side secret storage**, **not** in the client app. |
 | **Firestore** | Stores **data the product needs on the server** (for example fields related to chart limits, purchases or entitlements, sync or bookkeeping fields the server maintains). **Only** what the App sends and what the backend writes for these purposes is stored here. |
 | **Firebase App Check** | Uses **Apple App Attest** on real devices (where available) so our backend can treat traffic as more likely to come from the **genuine App**, which **reduces abuse and unauthorised API use**. |
 | **Firebase Anonymous Authentication** | Gives your installation a **pseudonymous Firebase user ID** so Cloud Functions and Firestore rules can run **without** you creating a username or password. |
@@ -166,7 +166,7 @@ We share information with:
 
 | Recipient | Role |
 |-----------|------|
-| **Google (Firebase / Google Cloud)** | **Cloud Functions**, **Firestore**, **App Check**, **Anonymous Authentication**, and **Secret Manager** (or equivalent server secret storage) as described in **Section 2**. See [Firebase Privacy and Security](https://firebase.google.com/support/privacy). |
+| **Google (Firebase / Google Cloud)** | **Cloud Functions**, **Firestore**, **App Check**, **Anonymous Authentication**, and **secure server-side secret storage** for credentials as described in **Section 2**. See [Firebase Privacy and Security](https://firebase.google.com/support/privacy). |
 | **Apple** | App distribution, **App Store** purchases, **StoreKit**, **App Attest** (via Apple’s platform for App Check) — see [Apple’s Privacy Policy](https://www.apple.com/legal/privacy/). |
 | **Professional advisers or authorities** | When required by law or to protect rights and safety |
 
@@ -184,7 +184,7 @@ We **do not sell** personal information. We **do not** share it for **cross-cont
 
 ## 10. Security
 
-We use measures appropriate to the risk: **HTTPS**, **access controls** on cloud resources, **Firebase App Check** to reduce abuse, and **server-only** storage of sensitive credentials in **Secret Manager** (or the same kind of **managed secret system**) so they are **not embedded in the client** for server operations. **No method of storage or transmission is completely secure.**
+We use measures appropriate to the risk: **HTTPS**, **access controls** on cloud resources, **Firebase App Check** to reduce abuse, and **secure server-side secret storage** so **confidential credentials** are **not embedded in the client app** for server operations. **No method of storage or transmission is completely secure.**
 
 ---
 
@@ -240,7 +240,7 @@ Singapore
 ### Document control
 
 - **Product name:** TianJi  
-- **Platform:** iOS (SwiftUI); backend: **Cloud Functions**, **Firestore**, **App Check** (App Attest on device), **Firebase Anonymous Auth**, **Secret Manager** / server secrets; **no** Analytics, Crashlytics, Remote Config, FCM, AdMob **in current release**.  
+- **Platform:** iOS (SwiftUI); backend: **Cloud Functions**, **Firestore**, **App Check** (App Attest on device), **Firebase Anonymous Auth**, **secure server-side secret storage**; **no** Analytics, Crashlytics, Remote Config, FCM, AdMob **in current release**.  
 - **Launch scope:** Chart generation and related shipped features; **no** live generative “reading” product in this Policy.  
 - **Support:** `SupportDiagnosticLog`, `SupportDiagnosticsBridge`, `SupportEmailComposer` — user-initiated email only; log excludes sensitive chart content **by design**; user may still type sensitive data in the email body.  
 - **Canonical Markdown:** `FirebaseApi/docs/privacy_policy.md`. Mirror HTML/MD (+ `index.html`) to **Privacy_Policy** repo. **Pages URL:** `https://sstan36.github.io/Privacy_Policy/privacy_policy.html`. In-app: `SettingsSupportConstants.privacyPolicyURL` / `privacyPolicyURLString` (use `.html`).
